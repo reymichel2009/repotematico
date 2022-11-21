@@ -434,7 +434,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
                                 caption=f'{txtinfo}',
                                 thumb='thumb.png',
                                 buttons=[Button.url('|ıllıll Ɇł Ᵽɍøfɇsøɍ |ıllıllı','https://t.me/Hiyabo')])
-            await bot.send_file(ev.chat,premium)
+            #await bot.send_file(ev.chat,premium)
             #await bot.send_file('-1001831303559',txtsendname,
                                 #caption=f'{txtinfo}',
                                 #thumb='thumb.png',
