@@ -8,7 +8,7 @@ SPLIT_FILE = 1024 * 1024 * int(os.environ.get('split_file','99'))
 ROOT_PATH = 'root/'
 ACCES_USERS = os.environ.get('tl_admin_user','Hiyabo').split(';')
 
-static_proxy = 'http://KFGGJJYGJKLHFKYEDIGDYJJEKEFKREEGLFDKLH' #agrega si kieres tener un proxy statico Con @raydel0307 si kieres comprar un proxy
+static_proxy = 'socks5h://KIDHKHYEJHJHGDYGJIGIGEYHIDIIRIGILGGJKG'
 PROXY = ProxyCloud.parse(static_proxy)
 
 if PROXY:
