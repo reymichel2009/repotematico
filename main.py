@@ -465,7 +465,7 @@ def init():
             try:
                 loopevent = asyncio.get_event_loop();
             except:
-                loopevent = asyncio.new_event_loop();
+                loopevent = None
 
         @async_worker
         @bot.on(events.NewMessage()) 
