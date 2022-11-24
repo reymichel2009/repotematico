@@ -22,8 +22,8 @@ from pydownloader.downloader import Downloader
 import shorturl
 import xdlink
 
-tl_admin_users = ['Hiyabo'] #Poner aqui los user con acceso permanente
-godlist = ['Hiyabo'] #Poner aqui los admin 
+tl_admin_users = ['reymichel2009'] #Poner aqui los user con acceso permanente
+godlist = ['reymichel2009'] #Poner aqui los admin 
 
 async def get_root(username):
     if os.path.isdir(config.ROOT_PATH+username)==False:
@@ -426,14 +426,14 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             tspace = config.space
             tspace[username] = tspace[username] + spac
             filesize = []
-            txtinfo = '====>>> #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 <<<<====\n#ℕ𝕒𝕞𝕖: ' + txtsendname + '\n\n>>>> ' + str(space) + 'mb 𝕖𝕟 #ℙ𝕒𝕣𝕥𝕖𝕤 𝕕𝕖 99  𝕞𝕓\n====>>> #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 <<<<===='
+            txtinfo = '====>>> Finalizado <<<<====\nNombre: ' + txtsendname + '\n\n>>>> ' + str(space) + 'mb partes de 99  𝕞𝕓\n====>>> Finalizado <<<<===='
             username = ev.message.chat.username
             premium = os.path.basename('especial.tgs')
             await bot.delete_messages(ev.chat,message)
             await bot.send_file(ev.chat,txtsendname,
                                 caption=f'{txtinfo}',
                                 thumb='thumb.png',
-                                buttons=[Button.url('|ıllıll Ɇł Ᵽɍøfɇsøɍ |ıllıllı','https://t.me/raydel0307')])
+                                buttons=[Button.url('Rey Michel','https://t.me/reymichel2009')])
             await bot.send_file(ev.chat,premium)
             #await bot.send_file('-1001831303559',txtsendname,
                                 #caption=f'{txtinfo}',
