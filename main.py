@@ -463,7 +463,7 @@ def init():
             loopevent = asyncio.get_runing_loop();
         except:
             try:
-                loopevent = asyncio.set_event_loop(loop);
+                loopevent = asyncio.get_event_loop();
             except:
                 loopevent = asyncio.new_event_loop();
 
