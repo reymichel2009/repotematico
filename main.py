@@ -3,7 +3,7 @@ from telethon.events import NewMessage
 
 from utils import createID,get_file_size,sizeof_fmt
 from threads import ThreadAsync,Thread
-#from worker import async_worker
+from worker import async_worker
 
 import asyncio
 import base64
