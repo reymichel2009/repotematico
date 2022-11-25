@@ -40,7 +40,7 @@ async def send_root(bot,ev,username):
         fsize = get_file_size(config.ROOT_PATH + username + '/' + item)
         prettyfsize = sizeof_fmt(fsize)
         reply += str(i) + ' - ' + fname + ' [' + prettyfsize + ']\n'
-    await bot.send_message(ev.chat.id,reply)
+    await bot.send_message(ev.chat.id,reply) #Esperar a que el bot envie el mensaje
 
 def text_progres(index, max):
             try:
