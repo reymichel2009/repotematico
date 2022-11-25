@@ -213,7 +213,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         pass
 
     if '/start' in text:
-        reply = '————————》<a href="https://t.me/Ghosthell0210">GhostNeverDie🎉</a>《—————————\n'
+        reply = '————————》<a href="https://t.me/reymichel2009">Rey Michel🎉</a>《—————————\n'
         reply += '𝕭𝖔𝖙 𝖕𝖊𝖗𝖙𝖊𝖓𝖊𝖈𝖎𝖊𝖓𝖙𝖊 𝖆𝖑 𝖈𝖗𝖊𝖆𝖉𝖔𝖗 𝖉𝖊 𝖏𝖚𝖊𝖌𝖔𝖘 𝖞 𝖇𝖔𝖙𝖘 𝖉𝖊 𝖙𝖊𝖑𝖊𝖌𝖗𝖆𝖒 𝕽𝖊𝖞 𝕸𝖎𝖈𝖍𝖊𝖑'
         reply += '𝕰𝖓𝖛𝖎𝖆𝖒𝖊 𝖚𝖓 𝖑𝖎𝖓𝖐 𝖕𝖆𝖗𝖆 𝖉𝖊𝖘𝖈𝖆𝖗𝖌𝖆𝖗𝖑𝖔 𝖞 𝖘𝖚𝖇𝖎𝖗𝖑𝖔 𝖆 𝖑𝖆 𝖓𝖚𝖇𝖊 \n————————》<a href="https://t.me/reymichel2009">Rey Michel</a>《—————————\n'
         message = await bot.send_message(ev.chat.id,reply,parse_mode='html')
