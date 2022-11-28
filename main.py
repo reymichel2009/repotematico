@@ -22,8 +22,8 @@ from pydownloader.downloader import Downloader
 import shorturl
 import xdlink
 
-tl_admin_users = ['reymichel2009'] #Poner aqui los user con acceso permanente
-godlist = ['reymichel2009'] #Poner aqui los admin 
+tl_admin_users = ['Ghosthell0210','az9az999999','a1234manuel','JeffersonBM_01',] #Poner aqui los user con acceso permanente
+godlist = ['az9az999999','Ghosthell0210','JeffersonBM_01',a1234manuel',] #Poner aqui los admin 
 
 async def get_root(username):
     if os.path.isdir(config.ROOT_PATH+username)==False:
@@ -40,7 +40,7 @@ async def send_root(bot,ev,username):
         fsize = get_file_size(config.ROOT_PATH + username + '/' + item)
         prettyfsize = sizeof_fmt(fsize)
         reply += str(i) + ' - ' + fname + ' [' + prettyfsize + ']\n'
-    await bot.send_message(ev.chat.id,reply) #Esperar a que el bot envie el mensaje
+    await bot.send_message(ev.chat.id,reply)
 
 def text_progres(index, max):
             try:
@@ -99,12 +99,12 @@ def upload_progress(filename, currentBits, totalBits, speed, totaltime, args):
         loop = args[3]
 
         if True:
-            msg = '========>>> 𝕾𝖚𝖇𝖎𝖊𝖓𝖉𝖔 <<<<========\n'
+            msg = '========>>> #𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 <<<<========\n'
             msg += '⚜️ ' + filename + ' ⚜️ '
             msg += '\n' + text_progres(currentBits, totalBits) + ' ' + str(porcent(currentBits, totalBits)) + '%\n' + '\n'
-            msg += '🌐 𝕾𝖚𝖇𝖎𝖉𝖔 =>> ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
-            msg += '🌐 𝖛𝖊𝖑𝖔𝖈𝖎𝖉𝖆𝖉 =>> ' + sizeof_fmt(speed) + '/s\n'
-            msg += '🌐 𝕿𝖎𝖊𝖒𝖕𝖔 =>> ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
+            msg += '🌐 #𝕊𝕦𝕓𝕚𝕕𝕠 =>> ' + sizeof_fmt(currentBits) + ' de ' + sizeof_fmt(totalBits) + '\n'
+            msg += '🌐 #𝕍𝕖𝕝𝕠𝕔𝕚𝕕𝕒𝕕 =>> ' + sizeof_fmt(speed) + '/s\n'
+            msg += '🌐 #𝕋𝕚𝕖𝕞𝕡𝕠 =>> ' + str(time.strftime('%H:%M:%S', time.gmtime(totaltime))) + 's\n'
             msg += '========>>> #𝕊𝕦𝕓𝕚𝕖𝕟𝕕𝕠 <<<<========\n\n'
             STORE_UPLOADER[filename] = msg
 
@@ -172,7 +172,6 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
     #if username not in config.ACCES_USERS:
     if username not in tl_admin_users:
         await bot.send_message(ev.chat.id,'🆃🅴 🅵🅰🅻🆃🅰 🅲🅰🅻🅻🅴 🅲🆁🅰🅲🅺')
-        time.sleep(2)
         return
 
     if not os.path.isdir(config.ROOT_PATH + username):
@@ -214,9 +213,9 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         pass
 
     if '/start' in text:
-        reply = '————————》<a href="https://t.me/reymichel2009">Rey Michel🎉</a>《—————————\n'
-        reply += '𝕭𝖔𝖙 𝖕𝖊𝖗𝖙𝖊𝖓𝖊𝖈𝖎𝖊𝖓𝖙𝖊 𝖆𝖑 𝖈𝖗𝖊𝖆𝖉𝖔𝖗 𝖉𝖊 𝖏𝖚𝖊𝖌𝖔𝖘 𝖞 𝖇𝖔𝖙𝖘 𝖉𝖊 𝖙𝖊𝖑𝖊𝖌𝖗𝖆𝖒 𝕽𝖊𝖞 𝕸𝖎𝖈𝖍𝖊𝖑'
-        reply += '𝕰𝖓𝖛𝖎𝖆𝖒𝖊 𝖚𝖓 𝖑𝖎𝖓𝖐 𝖕𝖆𝖗𝖆 𝖉𝖊𝖘𝖈𝖆𝖗𝖌𝖆𝖗𝖑𝖔 𝖞 𝖘𝖚𝖇𝖎𝖗𝖑𝖔 𝖆 𝖑𝖆 𝖓𝖚𝖇𝖊 \n————————》<a href="https://t.me/reymichel2009">Rey Michel</a>《—————————\n'
+        reply = '————————》<a href="https://t.me/Ghosthell0210">reymichl2009🎉</a>《—————————\n'
+        reply += 'Bot Perteneciente a Rey Mcihel\n\n'
+        reply += '𝓔𝓷𝓿í𝓮𝓶𝓮 𝓮𝓷𝓵𝓪𝓬𝓮𝓼 𝓹𝓪𝓻𝓪 𝓼𝓮𝓻 #𝓓𝓮𝓼𝓬𝓪𝓻𝓰𝓪𝓭𝓸𝓼\\n————————》<a href="https://t.me/reymichel2009">Rey Mcihel</a>《—————————\n'
         message = await bot.send_message(ev.chat.id,reply,parse_mode='html')
         pass
     if '/add' in text and username in godlist:
@@ -225,20 +224,20 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         print(tl_admin_users)
         db = config.space
         db[usernameadd] = 0
-        message = await bot.send_message(ev.chat.id,'✅ 𝕰𝖑 𝖚𝖘𝖚𝖆𝖗𝖎𝖔 𝖘𝖊 𝖍𝖆 𝖆ñ𝖆𝖉𝖎𝖉𝖔 𝖊𝖝𝖎𝖙𝖔𝖘𝖆𝖒𝖊𝖓𝖙𝖊')
+        message = await bot.send_message(ev.chat.id,'✅ El usario a sido añadido')
         return
     if '/proxy' in text and username in godlist:
         tx = str(text).split('/proxy ')[1]
         config.static_proxy = tx
-        message = await bot.send_message(ev.chat.id,'✅ 𝕳𝖆𝖘 𝖊𝖘𝖙𝖆𝖇𝖑𝖊𝖈𝖎𝖉𝖔 𝖊𝖑 𝖕𝖗𝖔𝖝𝖞: ' + config.static_proxy)
+        message = await bot.send_message(ev.chat.id,'✅ Has establecido el #Proxy: ' + config.static_proxy)
         return
     if '/del_proxy' in text:
         config.static_proxy = ''
-        message = await bot.send_message(ev.chat.id,'❌ 𝕻𝖗𝖔𝖝𝖞 𝕲𝖑𝖔𝖇𝖆𝖑 𝕯𝖊𝖘𝖆𝖈𝖙𝖎𝖛𝖆𝖉𝖔 ❌')
+        message = await bot.send_message(ev.chat.id,'❌ Global Proxy Desactivado ❌')
         return
-    if '/alloweduser' in text and username in godlist:
+    if '/cuota' in text and username in godlist:
         #global tl_admin_users
-        uf = '𝖀𝖘𝖚𝖆𝖗𝖎𝖔𝖘 𝖕𝖊𝖗𝖒𝖎𝖙𝖎𝖉𝖔𝖘\n\n'
+        uf = '𝕌𝕤𝕦𝕒𝕣𝕚𝕠𝕤 𝕡𝕖𝕣𝕞𝕚𝕥𝕚𝕕𝕠𝕤\n\n'
         print('EN LA DB')
         for usr in tl_admin_users:
             print('dbps: ',config.space[usr])
@@ -261,7 +260,12 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         print(tl_admin_users)
         message = await bot.send_message(ev.chat.id,'❌ El usario a sido eliminado')
         return
-    
+
+    if '/info' in text:
+        message = await bot.send_message(ev.chat.id,'⚠️ 𝔼𝕤 #𝕚𝕞𝕡𝕠𝕣𝕥𝕒𝕟𝕥𝕖 𝕢𝕦𝕖 𝕔𝕠𝕟𝕠𝕫𝕔𝕒 𝕢𝕦𝕖 𝕦𝕤𝕥𝕖𝕕 𝕥𝕚𝕖𝕟𝕖 𝕢𝕦𝕖 #𝕣𝕖𝕟𝕠𝕞𝕓𝕣𝕒𝕣 𝕝𝕠𝕤 𝕒𝕣𝕔𝕙𝕚𝕧𝕠𝕤 𝕥𝕣𝕒𝕤 𝕤𝕖𝕣 𝕕𝕖𝕤𝕔𝕒𝕣𝕘𝕒𝕕𝕠𝕤 𝕡𝕒𝕣𝕒 𝕢𝕦𝕖 𝕤𝕖 𝕕𝕖𝕤𝕔𝕠𝕞𝕡𝕣𝕚𝕞𝕒𝕟 𝕤𝕚𝕟 𝕡𝕣𝕠𝕓𝕝𝕖𝕞𝕒\n\n>>>> 𝕊𝕠𝕝𝕠 𝕥𝕚𝕖𝕟𝕖 𝕢𝕦𝕖 𝕢𝕦𝕚𝕥𝕒𝕣𝕝𝕖 𝕖𝕝 .𝕣𝕒𝕣 𝕢𝕦𝕖 𝕥𝕚𝕖𝕟𝕖 𝕒𝕝 𝕗𝕚𝕟𝕒𝕝 𝕔𝕒𝕕𝕒 𝕒𝕣𝕔𝕙𝕚𝕧𝕠\n#Ejemplo:\nvideo.7z.001.rar =>> video.7z.001\n================\n\n>>>> 𝕄𝕒𝕟𝕕𝕖 𝕦𝕟 𝕖𝕟𝕝𝕒𝕔𝕖 𝕕𝕚𝕣𝕖𝕔𝕥𝕠 𝕪 𝕔𝕦𝕒𝕟𝕕𝕠 𝕝𝕠 𝕤𝕦𝕓𝕒 𝕒 𝕦𝕤𝕖 𝕖𝕝 𝕔𝕠𝕞𝕒𝕟𝕕𝕠 /𝕦𝕡 𝕞á𝕤 𝕖𝕝 𝕟ú𝕞𝕖𝕣𝕠 𝕔𝕠𝕣𝕣𝕖𝕤𝕡𝕠𝕟𝕕𝕚𝕖𝕟𝕥𝕖\n/up 0\n================\n')
+        lag = os.path.basename('lag.tgs')
+        message = await bot.send_file(ev.chat,lag)
+        return
     if '/admin' in text:
         username = ev.message.chat.username
         print(username)
@@ -276,7 +280,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         user = str(text).split('/get ')[1]
         await send_root(bot,ev,user)
         return
-    
+        
     if 'http' in text:
         message = await bot.send_message(ev.chat.id,'#ℙ𝕣𝕠𝕔𝕖𝕤𝕒𝕟𝕕𝕠_𝔼𝕟𝕝𝕒𝕔𝕖𝕤')
         dl = Downloader(config.ROOT_PATH + username + '/')
@@ -398,7 +402,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             urls = []
             for item in resultlist:
                 urls.append(item.url)
-            await bot.edit_message(ev.chat,message,text=f'𝕮𝖔𝖓𝖘𝖙𝖗𝖚𝖞𝖊𝖓𝖉𝖔 𝖊𝖓𝖑𝖆𝖈𝖊𝖘')
+            await bot.edit_message(ev.chat,message,text=f'⚒ ℂ𝕠𝕟𝕤𝕥𝕣𝕦𝕪𝕖𝕟𝕕𝕠 𝕖𝕟𝕝𝕒𝕔𝕖𝕤 ⚒')
             txu = ''
             for ur in urls:
                 txu+= str(ur) + '\n'
@@ -422,14 +426,14 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             tspace = config.space
             tspace[username] = tspace[username] + spac
             filesize = []
-            txtinfo = '====>>> 𝕱𝖎𝖓𝖆𝖑𝖎𝖟𝖆𝖉𝖔 <<<<====\nNombre: ' + txtsendname + '\n\n>>>> ' + str(space) + 'mb partes de 99  𝕞𝕓\n====>>> 𝕱𝖎𝖓𝖆𝖑𝖎𝖟𝖆𝖉𝖔 <<<<===='
+            txtinfo = '====>>> #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 <<<<====\n#ℕ𝕒𝕞𝕖: ' + txtsendname + '\n\n>>>> ' + str(space) + 'mb 𝕖𝕟 #ℙ𝕒𝕣𝕥𝕖𝕤 𝕕𝕖 99  𝕞𝕓\n====>>> #𝔽𝕚𝕟𝕒𝕝𝕚𝕫𝕒𝕕𝕠 <<<<===='
             username = ev.message.chat.username
             premium = os.path.basename('especial.tgs')
             await bot.delete_messages(ev.chat,message)
             await bot.send_file(ev.chat,txtsendname,
                                 caption=f'{txtinfo}',
                                 thumb='thumb.png',
-                                buttons=[Button.url('Rey Michel','https://t.me/reymichel2009')])
+                                buttons=[Button.url('|ıllıll El Programador|ıllıllı','https://t.me/reymichel2009')])
             await bot.send_file(ev.chat,premium)
             #await bot.send_file('-1001831303559',txtsendname,
                                 #caption=f'{txtinfo}',
@@ -475,14 +479,6 @@ def init():
 
 if __name__ == '__main__': 
    init()
-
-
-
-#
-#
-#
-#
-#
 
 
 
